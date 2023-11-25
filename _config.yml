@@ -1,0 +1,9 @@
+title: ASMap
+theme: minima
+remote_theme: jekyll/minima
+
+header_pages:
+  - resources.md
+
+minima:
+  skin: auto
