@@ -1,8 +1,11 @@
-title: ASMap
-theme: minima
+title: ASMap.org
 remote_theme: jekyll/minima
 
+plugins:
+  - jekyll-remote-theme
+
 header_pages:
+  - basics.md
   - resources.md
 
 minima:
