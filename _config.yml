@@ -9,6 +9,8 @@ header_pages:
   - data-sourcing.md
   - tools-and-resources.md
   - glossary.md
+  - bitcoin-core.md
+  - contributing.md
 
 minima:
   skin: auto
