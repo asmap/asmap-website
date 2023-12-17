@@ -6,19 +6,19 @@ permalink: /tools-and-resources/
 
 ## Tools
 
-- [RPKI client](https://github.com/rpki-client/rpki-client-portable)
-- RPKI client Nix [flake](https://github.com/fjahr/rpki-client-nix)
-- [kartograf](https://github.com/fjahr/kartograf)
-- [asmap-py](https://github.com/sipa/asmap/blob/nextgen/asmap.py)
-- Bitcoin Core asmap code https://github.com/bitcoin/bitcoin/blob/master/contrib/seeds/asmap.py
-- [asmap-rs](https://github.com/rrybarczyk/asmap-rs/tree/master)
+- [RPKI client](https://github.com/rpki-client/rpki-client-portable) - the RPKI client.
+- RPKI client Nix [flake](https://github.com/fjahr/rpki-client-nix) - a Nix flake bundling the RPKI client.
+- [kartograf](https://github.com/fjahr/kartograf) - the Kartograf repository.
+- [asmap-py](https://github.com/sipa/asmap/blob/nextgen/asmap.py) - a Python script to compress an ASMap file.
+- Bitcoin Core asmap code https://github.com/bitcoin/bitcoin/blob/master/contrib/seeds/asmap.py - the ASMap Core script code.
+- [asmap-rs](https://github.com/rrybarczyk/asmap-rs/tree/master) - a Rust program to download and parse data from the RIPE NCC.
 
 ## References
 
-- [RIS docs](https://ris.ripe.net/docs/mrt/)
-- [RPKI docs](https://rpki.readthedocs.io/en/latest/about/introduction.html#about-resource-public-key-infrastructure)
-- ASmap "Call to Action" [post](https://blog.bitmex.com/call-to-action-testing-and-improving-asmap/) by Gleb Naumenko (2020)
-- ASmap IRC [discussion](https://bitcoin-irc.chaincode.com/bitcoin-core-dev/2021-11-11#736102)
+- RIPE RIS [docs](https://ris.ripe.net/docs/mrt/)
+- RPKI [docs](https://rpki.readthedocs.io/en/latest/about/introduction.html#about-resource-public-key-infrastructure)
+- ASMap "Call to Action" [post](https://blog.bitmex.com/call-to-action-testing-and-improving-asmap/) by Gleb Naumenko (2020)
+- ASMap IRC [discussion](https://bitcoin-irc.chaincode.com/bitcoin-core-dev/2021-11-11#736102)
 - RPKI Client [homepage](https://www.rpki-client.org/)
 - Routinator [docs](https://routinator.docs.nlnetlabs.nl/en/stable/installation.html)
 - "What can be learned from recent BGP hijacks targeting cryptocurrency services?" [article](https://www.kentik.com/blog/bgp-hijacks-targeting-cryptocurrency-services/)
