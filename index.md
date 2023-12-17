@@ -15,7 +15,7 @@ Since Core 20.0, users can pass their own (compressed) ASmap file to core, which
 Generating the IP-to-AS map relies on data that must be sourced from best-effort public announcements in several places and parsed carefully to detect errors and misattributions. To learn more about the sourcing of this AS data, see [Sourcing Data](../data-sourcing.md).
 
 Index:
-- [Background and Research](../research.md)
+- Background and Research
     - [Background](../background)
     - [Sourcing Data](../sourcing-data)
     - [Tools and Resources](../tools-and-resources)
