@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: default
 title: Sourcing Data
 permalink: /sourcing-data/
+nav_order: 4
 ---
 
 The major challenge remaining for ASmap is to source and aggregate data about which AS owns which IP address range. Several entities, public and private, make BGP announcement data available. The following data sources represent the current state of research, and all remain incomplete or problematic in some way.

@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Resources
+layout: default
 permalink: /resources/
 ---
 

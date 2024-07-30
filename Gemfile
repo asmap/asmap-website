@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll"
-gem "jekyll-remote-theme"
-gem "minima", git: 'https://github.com/jekyll/minima'
+gem "jekyll-sass-converter"
+gem "dartsass-ruby"
+gem "just-the-docs"
+gem "kramdown-parser-gfm"

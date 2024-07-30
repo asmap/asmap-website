@@ -1,8 +1,11 @@
 ---
-layout: page
+layout: default
 title: Background
 permalink: /background/
+nav_order: 2
 ---
+
+## AS, BGP, and Prior Work
 
 The following is background information on Autonomous Systems (AS) and BGP, as well as prior art on ASmap.
 

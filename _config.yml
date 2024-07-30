@@ -1,8 +1,9 @@
-title: ASMap.org
-remote_theme: jekyll/minima
+title: ASmap.org
 
-plugins:
-  - jekyll-remote-theme
+theme: just-the-docs
+
+nav_enabled: true
+heading_anchors: true
 
 header_pages:
   - background.md
@@ -12,5 +13,3 @@ header_pages:
   - bitcoin-core.md
   - contributing.md
 
-minima:
-  skin: auto
