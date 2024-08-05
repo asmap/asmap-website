@@ -97,6 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   dartsass-ruby
+  jekyll
   jekyll-sass-converter
   just-the-docs
   kramdown-parser-gfm
