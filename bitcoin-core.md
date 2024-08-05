@@ -1,10 +1,11 @@
 ---
-layout: page
-title: Bitcoin Core
+layout: default
+title: In Bitcoin Core
 permalink: /bitcoin-core/
+nav_order: 4
 ---
 
-## Motivation
+## ASmap in Bitcoin Core
 
 Using an ASmap file in one's Bitcoin Core configuration is already strictly better than the default, and so we want to encourage usage of ASMap among users. However, currently the adoption of the ASMap feature must be assumed to be minimal, since doing so requires creating or procuring an ASMap file and then passing it as an option to the node during startup. Aside from the common wisdom that most users don't change the defaults, this is hindered further by the fact that there is no trusted way to provide ASMap files for download, and the tools available for creating an ASMap file are scattered across multiple projects.
 

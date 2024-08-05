@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: default
 title: Tools and Resources
 permalink: /tools-and-resources/
+nav_order: 3
 ---
 
 ## Tools
