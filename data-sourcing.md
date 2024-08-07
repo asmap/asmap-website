@@ -5,9 +5,13 @@ permalink: /sourcing-data/
 nav_order: 4
 ---
 
+
+## Sourcing Data
+--------
+
 The major challenge remaining for ASmap is to source and aggregate data about which AS owns which IP address range. Several entities, public and private, make BGP announcement data available. The following data sources represent the current state of research, and all remain incomplete or problematic in some way.
 
-#### RIPE RIS
+### RIPE RIS
 
 RIPE RIS has been used as the source for all ASMaps so far, but the project describes itself the data as "useful for looking at the state of the BGP Internet, debugging/post-mortems of events in BGP, and tracking of long-term trends in BGP" [RIS docs](https://ris.ripe.net/docs/mrt/). As such, data is collected for research purposes to observe and examine malicious behavior after the fact and learn from it. This means RIS would go out of its way to include data such as BGP hijacks and fat-finger type of leaks. There is no filtering or clean-up (after a leak was identified) of this data. The RRC's location and functionality are also publicly known so sending malicious announcements with the goal of getting them into RIS is comparatively easy.
 
@@ -15,7 +19,7 @@ This means the RIS data is not used anywhere else to inform routing decisions di
 
 I believe we fare best if we only use RIPE RIS and comparable data sources as the input of last resort, when certain mappings are not available anywhere else.
 
-#### RPKI
+### RPKI
 
 We can download RPKI ROAs and build a prefix to AS mapping from it that is validated by the trust chain from one of the RIRs. This gives us a much higher quality of data.
 
@@ -25,7 +29,7 @@ The downside of RPKI is that its data is not complete since RPKI is not as widel
 
 On the plus side: RPKI adoption is growing [11] so we can expect further improvements in data completeness over time. To some degree, it would also be interesting to call the wider bitcoin community's attention to this and ask them to check if their hosting provider has already implemented RPKI and if that is not the case message them that it would be a good idea to do it.
 
-#### IRR
+### IRR
 
 The IRR (Internet Routing Registry) is a distributed set of databases that are individually operated by organizations and contain routing information for networks on the internet. It is used by network operators to register and maintain information about the internet routes that they use to reach other networks. IRR is the de-facto bridging option for route filtering today even though they have a very loose security model. This has been known for a long time. There’s no cryptographic signing of records. Records exist within some IRRs that are both clearly false and incomplete, often due to a lack of maintenance of the party that announced the outdated information.
 
@@ -33,7 +37,7 @@ There are multiple suppliers of IRR data, and some are better than others. Parti
 
 IRR is not a perfect data source, but the data should still be of higher quality than the RIPE RIS data. This is why I propose to use the RIR IRR DBs as additional input for the prefix to AS mapping and prefer their input over RIPE RIS mappings.
 
-#### Combining sources (merging)
+### Combining sources (merging)
 
 Kartograf uses RPKI as the base dataset, and augments it with IRR and RIS data if needed. If the base RPKI dataset doesn’t map a specific IP range yet (partially or fully) but the augmenting dataset has a mapping for this IP range then this new mapping will be added.
 

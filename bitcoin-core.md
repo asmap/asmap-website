@@ -7,11 +7,27 @@ nav_order: 4
 
 ## ASmap in Bitcoin Core
 
-Using an ASmap file in one's Bitcoin Core configuration is already strictly better than the default, and so we want to encourage usage of ASMap among users. However, currently the adoption of the ASMap feature must be assumed to be minimal, since doing so requires creating or procuring an ASMap file and then passing it as an option to the node during startup. Aside from the common wisdom that most users don't change the defaults, this is hindered further by the fact that there is no trusted way to provide ASMap files for download, and the tools available for creating an ASMap file are scattered across multiple projects.
+Using an ASmap file in one's Bitcoin Core configuration is already strictly better than the default, and so we want to encourage usage of ASMap among users. However, currently the adoption of the ASMap feature must be assumed to be minimal, since doing so requires creating or procuring an ASMap file and then passing it as an option to the node during startup. Aside from the common wisdom that most users don't change the defaults, there is no trusted way to provide ASMap files for download.
 
-## ToDos
+## Usage
 
-Changes required to Bitcoin Core are fairly minimal, with the goal of tool consolidation and the actual embedding of the data. A list of the related issues and PRs is maintained in the project [tracking issue](https://github.com/bitcoin/bitcoin/issues/28794) on GitHub.
+#### Passing an ASmap to Core
+
+Core will accept a compressed ASmap file with the `-asmap` option as described [here](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md#new-settings).
+
+#### Creating an ASmap with Kartograf
+
+[Kartograf](https://github.com/fjahr/kartograf) is a tool to fetch AS data from regional IRRs, and produce a file to be used with Core.
+
+#### Using `asmap-tool` in Core
+
+[asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file before passing it to Core.
+
+## TODO
+
+See the project [tracking issue](https://github.com/bitcoin/bitcoin/issues/28794) on GitHub.
+
+Changes required to Bitcoin Core are fairly minimal, with the goal of tool consolidation and the actual embedding of the data. Embedding an ASmap file at release time is the next significant milestone.
 
 ## ASMap usage and deployment in practice
 
