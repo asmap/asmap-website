@@ -5,6 +5,10 @@ permalink: /contributing/
 nav_order: 7
 ---
 
+## Contributing
+
+---------------
+
 A handful of changes are currently proposed in the Bitcoin Core project and need review. You can find them all linked in the [project tracking issue](https://github.com/bitcoin/bitcoin/issues/28794).
 
 The [Kartograf tool](https://github.com/fjahr/kartograf) could use lots of testing and there are plenty of opportunities for improvements, such as performance and test coverage.
