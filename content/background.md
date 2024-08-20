@@ -32,9 +32,7 @@ Starting with Core 20.0, you can pass an ASmap file via the `-asmap=<filepath>` 
 
 rrybarczyk wrote [asmap-rs](https://github.com/rrybarczyk/asmap-rs/) to download and parse RIS raw data from the RIPE NCC and produce a IP-to-AS map file.
 
-fjahr wrote [kartograf](https://github.com/fjahr/kartograf) sources data from RIPE, RPKI, and IRR databases, parses and combines the data, to produce an IP-to-AS map file.
-
-brunoerg, sipa, and naumekogs contributed much of the work behind integrating ASmap data in Core.
+brunoerg, naumekogs, and sipa contributed much of the work behind integrating ASmap data in Core.
 
 
 ------------------
