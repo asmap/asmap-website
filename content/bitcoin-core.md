@@ -18,7 +18,7 @@ You can download a pre-made [latest_asmap.data](https://github.com/fjahr/asmap-d
 
 #### Create an ASmap with Kartograf
 
-You can choose to generate an ASmap file yourself. [Kartograf](https://github.com/fjahr/kartograf) is a tool to fetch AS data from regional IRRs, and produce a file to be used with Bitcoin Core.
+You can choose to generate an ASmap file yourself. [Kartograf](https://github.com/fjahr/kartograf) is a tool that fetches AS data from multiple sources, combines them, and produces a file with raw map data that can be used in Bitcoin Core after being compressed.
 
 #### Compress it with `asmap-tool`
 
