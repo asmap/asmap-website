@@ -22,7 +22,7 @@ You can choose to generate an ASmap file yourself. [Kartograf](https://github.co
 
 #### Compress it with `asmap-tool`
 
-If you generate a file yourself, you must compress it before passing it to `bitcoind`. [asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file which ships with Bitcoin Core.
+If you generate a file yourself, you must compress it before passing it to `bitcoind`. [asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file. `asmap-tool` is included in the Bitcoin Core repository.
 
 ## TODO
 
