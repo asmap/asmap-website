@@ -14,7 +14,7 @@ Using an ASmap file in one's Bitcoin Core configuration is already strictly bett
 ## Usage
 
 `bitcoind` will accept a compressed ASmap file with the `-asmap` startup option.
-You can download a pre-made [latest_asmap.data](https://github.com/fjahr/asmap-data/blob/main/latest_asmap.dat) file in the [asmap-data](https://github.com/fjahr/asmap-data) repo.
+You can download a pre-made [latest_asmap.dat](https://github.com/fjahr/asmap-data/blob/main/latest_asmap.dat) file in the [asmap-data](https://github.com/fjahr/asmap-data) repo.
 
 #### Create an ASmap with Kartograf
 
