@@ -28,12 +28,11 @@ The central problem is that sharing a route via BGP relies on trust, in the sens
 
 Starting with Core 20.0, you can pass an ASmap file via the `-asmap=<filepath>` option. Sourcing the data and generating these ASmaps require some tooling.
 
-## Existing work
+## Prior work
 
-rrybarczyk wrote asmap-rs to download and parse RIS raw data from the RIPE NCC and produce a IP-to-AS map file.
+rrybarczyk wrote [asmap-rs](https://github.com/rrybarczyk/asmap-rs/) to download and parse RIS raw data from the RIPE NCC and produce a IP-to-AS map file.
 
-fjahr wrote kartograf sources data from RIPE, RPKI, and IRR databases, parses and combines the data, to produce an IP-to-AS map file.
+brunoerg, naumekogs, and sipa contributed much of the work behind integrating ASmap data in Core.
 
-brunoerg, sipa, and naumekogs contributed much of the work behind integrating ASmap data in Core.
 
-Once a map file is generated via either script, one can compress it with sipa's asmap python script. The compression is necessary as Bitcoin Core will only accept a compressed file to use for its bucketing logic.
+------------------

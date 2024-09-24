@@ -8,11 +8,3 @@ plugins:
 nav_enabled: true
 heading_anchors: true
 
-header_pages:
-  - background.md
-  - data-sourcing.md
-  - tools-and-resources.md
-  - glossary.md
-  - bitcoin-core.md
-  - contributing.md
-

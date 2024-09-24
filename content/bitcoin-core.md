@@ -2,26 +2,27 @@
 layout: default
 title: In Bitcoin Core
 permalink: /bitcoin-core/
-nav_order: 4
+nav_order: 3
 ---
 
 ## ASmap in Bitcoin Core
 
-Using an ASmap file in one's Bitcoin Core configuration is already strictly better than the default, and so we want to encourage usage of ASMap among users. However, currently the adoption of the ASMap feature must be assumed to be minimal, since doing so requires creating or procuring an ASMap file and then passing it as an option to the node during startup. Aside from the common wisdom that most users don't change the defaults, there is no trusted way to provide ASMap files for download.
+---------------------
+
+Using an ASmap file in one's Bitcoin Core configuration is already strictly better than the default, and so we want to encourage usage of ASmap among users. However, currently the adoption of the ASmap feature must be assumed to be minimal, since doing so requires creating or procuring an ASMap file and then passing it as an option to the node during startup. Aside from the common wisdom that most users don't change the defaults, there is no trusted way to provide ASmap files for download.
 
 ## Usage
 
-#### Passing an ASmap to Core
+`bitcoind` will accept a compressed ASmap file with the `-asmap` startup option.
+You can download a pre-made [latest_asmap.data](https://github.com/fjahr/asmap-data/blob/main/latest_asmap.dat) file in the [asmap-data](https://github.com/fjahr/asmap-data) repo.
 
-Core will accept a compressed ASmap file with the `-asmap` option as described [here](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md#new-settings).
+#### Create an ASmap with Kartograf
 
-#### Creating an ASmap with Kartograf
+You can choose to generate an ASmap file yourself. [Kartograf](https://github.com/fjahr/kartograf) is a tool that fetches AS data from multiple sources, combines them, and produces a file with raw map data that can be used in Bitcoin Core after being compressed.
 
-[Kartograf](https://github.com/fjahr/kartograf) is a tool to fetch AS data from regional IRRs, and produce a file to be used with Core.
+#### Compress it with `asmap-tool`
 
-#### Using `asmap-tool` in Core
-
-[asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file before passing it to Core.
+If you generate a file yourself, you must compress it before passing it to `bitcoind`. [asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file. `asmap-tool` is included in the Bitcoin Core repository.
 
 ## TODO
 
@@ -31,7 +32,7 @@ Changes required to Bitcoin Core are fairly minimal, with the goal of tool conso
 
 ## ASMap usage and deployment in practice
 
-Aside from the code changes mentioned above, a process needs to be defined regarding how the data embedded with Core is created. Based on a previous proposal and some previous feedback the current proposal for this is as follows:
+Aside from the code changes mentioned above, a process needs to be defined regarding how the data embedded with Bitcoin Core is created. Based on a previous proposal and some previous feedback the current proposal for this is as follows:
 
 - A repository for management of ASMap data is created under the bitcoin core org (see [fjahr/asmap-data](https://github.com/bitcoin/bitcoin/issues/28794) for an example of how this might look in practice).
 - Any contributor can open issues to coordinate the collaborative creation of a new ASMap file (see coordinated launch in Kartograf, and a [the example in fjahr/asmap-data](https://github.com/fjahr/asmap-data/issues/4)). If multiple collaborators have created a result file with the same hash, this improves trust in the validity of input data and the final result. Effectively the trust in the input data is federated.
