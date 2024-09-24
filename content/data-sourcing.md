@@ -13,9 +13,9 @@ The major challenge remaining for ASmap is to source and aggregate data about wh
 
 ### RPKI
 
-We can download [RPKI](http://localhost:4000/glossary/#rpki-resource-public-key-infrastructure) [ROAs](http://localhost:4000/glossary/#roa-route-origin-authorization) and build a prefix to AS mapping from it that is validated by the trust chain from one of the RIRs. This gives us a much higher quality of data.
+We can download [RPKI](/glossary/#rpki-resource-public-key-infrastructure) [ROAs](/glossary/#roa-route-origin-authorization) and build a prefix to AS mapping from it that is validated by the trust chain from one of the RIRs. This gives us a much higher quality of data.
 
-Open-source validator software that does most of the heavy lifting for us is available. The most likely candidates to be used are RPKI-client and Routinator as shown by analysis of a variety of factors recently (see [Tools](http://localhost:4000/tools-and-resources/)).
+Open-source validator software that does most of the heavy lifting for us is available. The most likely candidates to be used are RPKI-client and Routinator as shown by analysis of a variety of factors recently (see [Tools](/tools-and-resources/)).
 
 The downside of RPKI is that its data is not complete since RPKI is not as widely deployed as we would like. If RPKI is not deployed by an AS their prefixes cannot be validated and will not be present in an RPKI repository. In a test in mid 2023, I found about 60% of the Bitcoin network can be validated. This is a good base but not enough.
 
@@ -35,7 +35,7 @@ The IRR (Internet Routing Registry) is a distributed set of databases that are i
 
 There are multiple suppliers of IRR data, and some are better than others. Particularly those IRRs that are not bound to a specific RIR, such as RADB and AltDB seem to be more vulnerable. A [recent attack](https://www.kentik.com/blog/bgp-hijacks-targeting-cryptocurrency-services/) in the crypto space was able due to AltDB's open nature. RADB is also open, only requiring a membership fee. However, the IRR DBs operated by the RIRs provide much better security since they can compare incoming data with their customer records. They manage all the prefixes and can verify the registration of IRR objects with address ownership information.
 
-IRR is not a perfect data source, but the data should still be of higher quality than the RIPE RIS data. This is why I propose to use the RIR IRR DBs as additional input for the prefix to AS mapping and prefer their input over RIPE RIS mappings.
+IRR is not a perfect data source, but the data should still be of higher quality than the RIPE RIS data. Therefore we've tended to use the RIR IRR DBs as additional input for the prefix to AS mapping and prefer their input over RIPE RIS mappings.
 
 ### Aggregating From Sources
 
