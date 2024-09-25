@@ -24,6 +24,14 @@ You can choose to generate an ASmap file yourself. [Kartograf](https://github.co
 
 If you generate a file yourself, you must compress it before passing it to `bitcoind`. [asmap-tool](https://github.com/bitcoin/bitcoin/tree/master/contrib/asmap) is a Python script to help encode/compress an ASmap file. `asmap-tool` is included in the Bitcoin Core repository.
 
+#### ASmap Health Check
+
+If an ASmap is provided when starting bitcoind, a health check will run every 24 hours and log the level of coverage the ASmap can validate for one's current peer set. For example:
+```
+ASMap Health Check: 32546 clearnet peers are mapped to 3127 ASNs with 113 peers being unmapped
+```
+Meaning, there are valid AS entries for 32546 of one's peers, and 113 peers don't have a valid AS entry in the provided ASmap.
+
 ## TODO
 
 See the project [tracking issue](https://github.com/bitcoin/bitcoin/issues/28794) on GitHub.
