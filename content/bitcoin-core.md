@@ -34,7 +34,7 @@ Meaning, there are AS mappings available for the IPs of 32546 of our peers. 113 
 
 #### ASmap fields in RPC
 
-If ASmap is enabled, the `getpeerinfo` RPC command's response will include `mapped_as` field, indicating which AS this peer's IP was mapped to via the given ASmap, if any (as of Bitcoin Core [v22.0](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md#updated-rpcs)).
+If ASmap is enabled, the `getpeerinfo` RPC command's response will include `mapped_as` field, indicating which AS this peer's IP was mapped to via the given ASmap, if any.
 
 Similarly, the `getrawaddrman` RPC command's response will include `source_mapped_as` field, indicating which AS this peer's source IP was mapped to, if any (as of Bitcoin Core [v28.0](https://github.com/bitcoin/bitcoin/blob/1147e72953d1f262111a4b1d5a438a8394511bc7/src/rpc/net.cpp#L1160)).
 
