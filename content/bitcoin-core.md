@@ -30,7 +30,7 @@ If an ASmap is provided when starting bitcoind, a health check will run during s
 ```
 ASMap Health Check: 32546 clearnet peers are mapped to 3127 ASNs with 113 peers being unmapped
 ```
-Meaning, there are valid AS entries for 32546 of one's peers, and 113 peers don't have a valid AS entry in the provided ASmap.
+Meaning, there are AS mappings available for the IPs of 32546 of our peers. 113 peers don't have an AS mapping for their IP in the provided ASmap.
 
 ## TODO
 
