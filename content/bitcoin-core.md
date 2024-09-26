@@ -26,7 +26,7 @@ If you generate a file yourself, you must compress it before passing it to `bitc
 
 #### ASmap Health Check
 
-If an ASmap is provided when starting bitcoind, a health check will run every 24 hours and log the level of coverage the ASmap can validate for one's current peer set. For example:
+If an ASmap is provided when starting bitcoind, a health check will run during startup and then every 24 hours. It logs the level of coverage the ASmap provides for all the clearnet addresses known to our node. For example:
 ```
 ASMap Health Check: 32546 clearnet peers are mapped to 3127 ASNs with 113 peers being unmapped
 ```
