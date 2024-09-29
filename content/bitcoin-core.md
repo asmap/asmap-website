@@ -38,6 +38,14 @@ If ASmap is enabled, the `getpeerinfo` RPC command's response will include `mapp
 
 Similarly, the `getrawaddrman` RPC command's response will include `source_mapped_as` field, indicating which AS this peer's source IP was mapped to, if any (as of Bitcoin Core [v28.0](https://github.com/bitcoin/bitcoin/blob/1147e72953d1f262111a4b1d5a438a8394511bc7/src/rpc/net.cpp#L1160)).
 
+#### Inspecting assignment changes between two ASmaps
+
+The `contrib/asmap-tool.py` script provides a `diff-addrs` command to show changes in AS mappings between two ASmaps. The output will show the peer IP addresses, and their new status: assigned (or reassigned) from previous AS to the new AS. It takes a set of peers in the format of the `getnodeaddresses` RPC, and two different ASmaps to measure changes as arguments:
+```
+$ contrib/asmap/asmap-tool.py diff-addrs <asmap-1> <asmap-2> <(bitcoin-cli getnodeaddresses 0)
+```
+This allows a node operator to see the changes that a known IP address's AS assignment underwent in a given timespan, defined by the times at which the ASmaps was generated. If an `unassigned` value is returned as either the original or latest AS assignment, it means that the ASmap provided did not have a mapping for the IP address given.
+
 ## TODO
 
 See the project [tracking issue](https://github.com/bitcoin/bitcoin/issues/28794) on GitHub.
