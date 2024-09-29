@@ -44,7 +44,7 @@ The `contrib/asmap-tool.py` script provides a `diff-addrs` command to show chang
 ```
 $ contrib/asmap/asmap-tool.py diff-addrs <asmap-1> <asmap-2> <(bitcoin-cli getnodeaddresses 0)
 ```
-This allows a node operator to see the changes that a known IP address's AS assignment underwent in a given timespan, defined by the times at which the ASmaps was generated. If an `unassigned` value is returned as either the original or latest AS assignment, it means that the ASmap provided did not have a valid mapping for the IP address given. It does *not* mean that the IP address has no AS assignment in general.
+This allows a node operator to see the changes that a known IP address's AS assignment underwent in a given timespan, defined by the times at which the ASmaps was generated. If an `unassigned` value is returned as either the original or latest AS assignment, it means that the ASmap provided did not have a mapping for the IP address given.
 
 ## TODO
 
