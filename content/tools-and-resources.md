@@ -7,6 +7,7 @@ nav_order: 5
 
 ## Tools
 
+- [IP-to-AS lookup](https://0xb10c.github.io/asmap-web/?ip=1.1.1.1,8.8.8.8,9.9.9.9): look up AS by IPs.
 - [RPKI client](https://github.com/rpki-client/rpki-client-portable): validates BGP and ROA announcements
 - RPKI client [Nix flake](https://github.com/asmap/rpki-client-nix) - a Nix flake bundling the RPKI client
 - [kartograf](https://github.com/asmap/kartograf): fetch, parse, and merge data from various RIRs and produce an ASmap
